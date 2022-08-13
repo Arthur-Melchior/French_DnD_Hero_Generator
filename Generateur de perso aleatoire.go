@@ -90,7 +90,6 @@ func main() {
 	// fmt.Println("Stats :", create_stat(), create_stat(), create_stat(), create_stat(), create_stat(), create_stat())
 }
 
-//TODO
 func create_layout(races []string, classes []string, origines []string) fyne.Container {
 
 	// randomly chooses one race, class and background
@@ -136,9 +135,9 @@ func create_layout(races []string, classes []string, origines []string) fyne.Con
 
 	stats_container := put_in_container(stats_label, stats_content)
 
-	conteneur := container.New(layout.NewVBoxLayout(), &race_container, &class_container, &origine_container, &stats_container)
+	container := container.New(layout.NewVBoxLayout(), &race_container, &class_container, &origine_container, &stats_container)
 
-	return *conteneur
+	return *container
 }
 
 func put_in_container(label fyne.CanvasObject, content fyne.CanvasObject) fyne.Container {
